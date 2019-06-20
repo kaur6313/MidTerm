@@ -15,54 +15,28 @@ import java.util.Scanner;
  */
 public class ArithmeticBase 
 {
-    private double x;
-    private double y;
+ public double x,y;
     double calculate(double x, double y) 
         {
         Scanner sc =new Scanner(System.in);
-        System.out.println("enter String");
-        String s= sc.next();
-        switch (s.toUpperCase()) 
+        System.out.println("enter 1 for addition \n"
+                + "\nenter 2 for subtraction "
+                + "\nenter 3 for multiplication"
+                + "\nenter 4 for division");
+        int s= sc.nextInt();
+        switch (s) 
         {
-            case "PLUS":
+            case 1:
                 return x + y;
-            case "MINUS":
+            case 2:
                 return x - y;
-            case "TIMES":
+            case 3:
                 return x * y;
-            case "DIVIDE":
+            case 4:
                 return x / y;
             default:
                 throw new AssertionError("Unknown operations " + this);
         }
-    }
-
-    /**
-     * @return the x
-     */
-    public double getX() {
-        return x;
-    }
-
-    /**
-     * @param x the x to set
-     */
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    /**
-     * @return the y
-     */
-    public double getY() {
-        return y;
-    }
-
-    /**
-     * @param y the y to set
-     */
-    public void setY(double y) {
-        this.y = y;
     }
    
 }
